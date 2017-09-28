@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	.row
+		.col-md-offset-2.col-md-8
+			h1= article.title
+			h5 Written by #{author.name}
+			p= article.body
+			hr
+			if user
+				if user.id == article.author || user.id == admin._id
+					.row
+						.col-md-6
+							a.btn.btn-primary.btn-block(href='/articles/edit/'+article._id) Edit
+						.col-md-6
+							a.btn.btn-danger.btn-block.delete-article(href='#', data-id=article._id) Delete

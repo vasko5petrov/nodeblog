@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	.row
+		.col-md-offset-2.col-md-8
+			form(method='POST', action='/articles/edit/'+article._id)
+				fieldset
+					legend
+						h1 #{title}
+					.form-group
+						label Title:
+						input.form-control(name='title', type='text', value=article.title)
+					.form-group
+						label Body:
+						textarea.form-control(name='body', rows='10', resize='none') #{article.body}
+					br
+					input.btn.btn-primary.btn-block(type='submit', value='Submit')
