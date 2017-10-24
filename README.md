@@ -1,1 +1,1 @@
-# Nodeblog is build using NodeJS, ExpressJS, MongoDB and Bootstrap
+# Nodeblog is build using NodeJS, ExpressJS, MongoDB, Jade and Bootstrap
